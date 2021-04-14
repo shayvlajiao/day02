@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		.box{
+			width:400px;
+			height:50px;
+		}
+		.box>div{
+			width:80px;
+			height:80px;
+			line-height:40px;
+			background:green;
+			margin:5px;
+			float:left;
+			text-align:center;
+		}
+		.div2{
+			width:400px;
+			height:400px;
+			position:relative;
+			
+		}
+		.div2>p{
+			width:400px;
+			height:400px;
+			line-height:400px;
+			background:yellow;
+			position:absolute;
+			top:0;
+			left:0;
+			display:none;
+			text-align:center;
+		}
+		.div2>p:nth-child(1){
+			display:block;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+	</div>
+	<div class="div2">
+		<p>1</p>
+		<p>2</p>
+		<p>3</p>
+	</div>
+	
+</body>
+<script>
+	{
+		let arr=[...document.querySelectorAll(".box>div")]
+		let arr1=[...document.querySelectorAll(".div2>p")]
+		console.log(arr,arr1)
+		arr.find((item,index)=>{
+			item.onclick=()=>{
+				arr1.find((item,index)=>{
+					item.style.display="none";
+					arr[index].style.background="green";
+				})
+				item.style.background="pink";
+				arr1[index].style.display="block";
+			}
+		})
+	}
+</script>
+</html>

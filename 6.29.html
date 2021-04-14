@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+      .sharp:before{
+         content:"";　
+         width:0px;
+         border-bottom:80px solid transparent;
+         border-top:80px solid transparent;
+         border-right:40px solid blue;
+         position:absolute;
+         left:-40px;
+         top:0px;
+     }
+     .sharp{
+         min-width:100px;
+         height:160px;
+         background:blue;
+         display: inline-block;
+         position: absolute;
+         line-height: 160px;
+         color:#FFFFFF;
+         font-size: 20px;
+         text-align: center;
+     }
+     .sharp:after{
+         content:"";　　
+         width:0px;
+         border-bottom:80px solid transparent;
+         border-top:80px solid transparent;
+         border-left:40px solid blue;
+         position:absolute;
+         right:-40px;
+         top:0px;
+     }
+       #sharpContainer{
+            width:100%;
+            height: 600px;
+        }
+        #sharpContainer .center{
+            top:200px;
+            left:300px;
+        }
+         #sharpContainer .top{
+             top:20px;
+             left:300px;
+         }
+         #sharpContainer .top-left{
+             top:110px;
+             left:140px;
+         }
+         #sharpContainer .top-right{
+             top:110px;
+             left:460px;
+         }
+         #sharpContainer .bottom{
+             top:380px;
+             left:300px;
+         }
+         #sharpContainer .bottom-left{
+             top:290px;
+             left:140px;
+         }
+         #sharpContainer .bottom-right{
+             top:290px;
+             left:460px;
+         }
+	</style>
+</head>
+<body>
+	<!-- <h2>三角形在左右两侧</h2> -->
+<!-- 第一种方法 不兼容低版本浏览器 -->
+   <!-- <div class="hexagon1"></div> -->
+   <!-- 第二种方法  兼容低版本浏览器 -->
+   <!-- <div class="hexagon2">
+        <div class="left"></div>
+        <div class="right"></div>
+   </div> -->
+
+    <!-- <h2>三角形在上下两侧</h2>
+    <div class="hexagon3"></div> -->
+    <div id="sharpContainer">
+    <div class="sharp center"></div>
+    <div class="sharp top"></div>
+    <div class="sharp top-left"></div>
+    <div class="sharp top-right"></div>
+    <div class="sharp bottom"></div>
+    <div class="sharp bottom-left"></div>
+    <div class="sharp bottom-right"></div>
+</div>
+</body>
+</html>
